@@ -8,6 +8,7 @@ twice.
 You can return the answer in any order.
 */
 
+// O(N)
 var twoSum = function (nums, target) {
   let hash = {};
   for (let i = 0; i < nums.length; i++) {
@@ -19,6 +20,20 @@ var twoSum = function (nums, target) {
     } else {
       hash[firstNum] = i;
       console.log(hash);
+    }
+  }
+};
+
+//O(N^2)
+
+var twoSum = function (nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    let firstNum = nums[i];
+    for (let j = i + 1; j < nums.length; j++) {
+      let secondNum = nums[j];
+      if (firstNum + secondNum === target) {
+        return [i, j];
+      }
     }
   }
 };
