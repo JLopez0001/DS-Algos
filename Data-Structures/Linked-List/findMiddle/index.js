@@ -48,3 +48,15 @@ function middle(head) {
     }
   }
 }
+
+function middle(ll) {
+  let slow = ll;
+  let fast = ll;
+
+  while (fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+
+  return slow;
+}
