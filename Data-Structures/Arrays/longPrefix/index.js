@@ -21,7 +21,7 @@ function long(str) {
   return str[0];
 }
 
-//O(N)
+//O(n * k)
 function prefix(str) {
   if (!str.length) return "";
 
