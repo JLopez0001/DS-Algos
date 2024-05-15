@@ -23,8 +23,8 @@ function addBinary(a, b) {
 
   while (i >= 0 || j >= 0 || carry > 0) {
     let sum = carry;
-    if (i >= 0) sum += parseInt(a[i], 10); // Convert binary digit to integer
-    if (j >= 0) sum += parseInt(b[j], 10); // Convert binary digit to integer
+    if (i >= 0) sum += parseInt(a[i]); // Convert binary digit to integer
+    if (j >= 0) sum += parseInt(b[j]); // Convert binary digit to integer
 
     carry = Math.floor(sum / 2); // Compute carry for next iteration
     result = (sum % 2) + result; // Prepend binary digit to result
