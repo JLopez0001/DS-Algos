@@ -66,4 +66,35 @@ function anagram(s, t) {
   return true;
 }
 
-console.log(anagram("anagrasnodem", "nagaram"));
+// console.log(anagram("anagrasnodem", "nagaram"));
+
+//Using only one object and checking it's frequency
+function anotherOne(s,t){
+  if(s.length !== t.length) return false 
+  let frequency = {}
+
+  for(const char of s){
+    if(char in frequency){
+      frequency[char] ++
+    } else {
+      frequency[char] = 1
+    }
+  }
+
+  for(const char of t){
+    if(!frequency[char]){
+      return false 
+    }
+    frequency[char] --
+  }
+
+  for(const key in frequency){
+    if(frequency[key] !== 0){
+      return false
+    }
+  }
+  return true
+}
+
+console.log(anotherOne("aagadrnm", "nagaram"));
+
