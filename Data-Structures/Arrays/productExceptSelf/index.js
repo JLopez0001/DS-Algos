@@ -41,3 +41,4 @@ function product(nums){
 }
 
 console.log(product([1,2,3,4]))
+
